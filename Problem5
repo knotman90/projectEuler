@@ -1,0 +1,11 @@
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
+for sure it has to divive all the prime between 1..20 hance is at least (using haskell notation)
+product [2,3,5,7,11,13,17,19]
+then you can just map all something like 
+map ((product p) `mod` ) [1..20] and add (smallest)factors that does not have zero in the corrensponding position of the resultingmap array
+
+
+
