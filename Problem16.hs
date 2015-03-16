@@ -1,5 +1,6 @@
 module Problem16 where
 
+-- usage: problem16 (2^1000)
 
 digitize x
 	| x `div` 10 == 0 = [x]
