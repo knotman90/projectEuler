@@ -1,0 +1,11 @@
+module Problem2 where
+
+problem2 :: Integer
+problem2 = problem2' 0 0 1 
+
+problem2' :: Integer -> Integer -> Integer -> Integer
+problem2' acc pp p 
+         | acc > 4000000
+         | (odd pp) && (odd p) = problem2' (acc + succ) p succ
+         | otherwise           = problem2' acc p succ             
+           where succ = pp+p
