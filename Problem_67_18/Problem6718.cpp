@@ -12,6 +12,7 @@
 using namespace std;
 
 /**
+ * IMPORTANT: options -std=c++11 needed to compile this file!
  * Strategy:
  * Read the matrix from the file
  * Iteratively starting from level zero compute the longest path to each node
