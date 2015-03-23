@@ -1,30 +1,35 @@
 #include<iostream>
-#include <cstring>
-#include "matrixUtils.h"
+
+
 
 using namespace std;
-void initMatrix(unsigned long **m , int X, int Y){
-int c=0;
-int tr=1;
-for(int c=0;c<X/2;c++){
-	tr=c*4+1;
-cout<<tr<<endl;
-}
+
+void solveProblem(int X){
+	int c=1;
+	int tr=1;
+	int br=1;
+    int bl=1;
+    int tl=1;
+	unsigned long sum=1;
+	for(int i=0;i<X/2;i++){
+		tr+=(c+2)*2+2*c;
+        br=tr-(c+2)*2-c+1;
+        bl=br+(c+2)-1;
+        tl=bl+(c+2)-1;
+		sum+=tr+br+bl+tl;
+		c+=2;
+	}
+	
+	cout<<"The total sum is "<<sum;
 
 }
 
 int main(){
-int X,Y;
-string path="problem29Input.dat";
-cout<<"Insert Matrix (sqare) size:"<<endl;
-cin>>X; Y=X;
+	int X;
+	cout<<"Insert Matrix (sqare) size:"<<endl;
+	cin>>X;
+	solveProblem(X);
 
-unsigned long** m=0;
-m = allocateMatrix(X,Y);
-
-
-
-deallocateMatrix(m,X);
 
  return 0;
 }
