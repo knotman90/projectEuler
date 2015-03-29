@@ -57,6 +57,32 @@ void initializeMatrix(unsigned long**p, int X, int Y,int val=0){
 }
 
 
+bool readMatrixFromFile(string path,unsigned long**n , int X , int Y){
+	string line;
+	ifstream myfile (path);
+	if (myfile.is_open())
+	{
+		unsigned long a;
+		for(int i=0;i<X;i++){
+			for(int j=0;j<Y;j++){
+				if(myfile >> a)
+					n[i][j]=a;
+				else
+					return false;
+			}
+		}
+		myfile.close();
+		return true;
+	}
+
+	else{
+		cerr << "ERROR Unable to open file\n";
+		return false;
+	}
+
+}
+
+
 bool readPiramydMatrixFromFile(string path,unsigned long**n , int X , int Y){
 	string line;
 	ifstream myfile (path);
