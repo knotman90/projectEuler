@@ -10,7 +10,7 @@ fc a
 
 --BRUTE FORCE SOLUTION
 solve:: Int
-solve = sum (filter (\x-> sfc x 0 == x) [10..2540160])
+solve = sum (filter (\x-> sfc x 0==x) [10..2540160])
 
 
 --sum factorial of digits
@@ -18,9 +18,10 @@ sfc :: Int -> Int -> Int
 sfc 0 acc = acc
 sfc n acc = sfc n' (acc+fc r)
 	where
-		n' = div n 10
-		r  = n-(10*n')
-{-		fc 0 =1
+		dr = divMod n 10
+		n' = fst dr
+		r  = snd dr
+		fc 0 =1
 		fc 1 =1
 		fc 2 =2
 		fc 3 =6
@@ -30,7 +31,7 @@ sfc n acc = sfc n' (acc+fc r)
 		fc 7 =5040
 		fc 8 =40320
 		fc 9 =362880
-	-}	
+	
 
 
 main = do
