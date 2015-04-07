@@ -1,8 +1,5 @@
 #include <iostream>
-#include<vector>
-
 using namespace std;
-
 
 void solve2(){
 	unsigned int n=0;
@@ -38,38 +35,12 @@ void solve2(){
 			}//fifty
 			sum-=one*100;
 		}//hundred
-cout<<"The total number is "<<n+8<<endl;
-}
 
-const unsigned int TARGET = 200;
-
-//1p, 2p, 5p, 10p, 20p, 50p, £1 (100p) and £2 (200p).
-unsigned int coins[] ={1,2,5,10,20,50,100,200};
-
-unsigned int solve(){
-	vector<unsigned int> indexs;
-	//can write TARGET max with TARGET COIN OF 1p
-	for(int i=1;i<=TARGET;i++){
-		//initialize index to 0,0,0..(i-times)
-		unsigned int psum=0;
-		unsigned int pos=0;
-		bool go = true;
-		do{
-
-			for(int p=1;p<=i;p++){
-				//find a suitable index here
-
-			}
-			//test sum
-
-			//test go
-		}while(go);
-	}
-
+//+8 because of the trivial solution given by 1*200,2*100,4*50 etc.
+cout<<"The Solution is "<<n+8<<endl;
 }
 
 int main(){
-
 	solve2();
 	return 0;
 }
