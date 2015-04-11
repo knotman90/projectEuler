@@ -29,7 +29,7 @@ void sieve(unsigned int bound){
 	}
 }
 
-//a Number is circular if does not contain
+//a Number is NOT circular if does  contain
 //any even digits or 5 (it has a rotation
 //that is divisible by two or 5)
 inline bool isCircular(unsigned int p){
