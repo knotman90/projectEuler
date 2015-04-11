@@ -4,6 +4,10 @@
 #include<algorithm>
 using namespace std;
 
+/*
+ * COMPILE:
+ * g++ -O2 -o Problem35 Problem35.cpp
+ */
 
 std::vector<unsigned int> primes;
 
